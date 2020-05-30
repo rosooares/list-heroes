@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import DialogHeroes from './DialogHeroes';
 import '../css/ListHerois.css';
 
 export const Powerstats = ({ powerstats }) => (
@@ -16,10 +17,25 @@ export const Powerstats = ({ powerstats }) => (
 );
 
 function ListHerois({ heroes }) {
-  console.log('heroes', heroes);
+  const [open, setOpen] = useState(false);
+  const [heroeSelected, setHeroeSelected] = useState({});
 
+  const handleClickOpen = (heroeSelected) => {
+    setOpen(true);
+    setHeroeSelected(heroeSelected);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <Grid container className="root">
+      <DialogHeroes 
+        open={open}
+        onClose={handleClose}
+        heroeSelected={heroeSelected}
+      />
+
       <Grid className="box-title-heroes">
         <Typography variant="h5" className="title-box-heroes">
           Lista de Heroís
@@ -35,7 +51,7 @@ function ListHerois({ heroes }) {
               <Typography variant="h6" className="title-box-heroes"> {cinemaItem.name} </Typography>
               <Typography variant="caption"> Poderes: </Typography>
               <Powerstats powerstats={cinemaItem.powerstats} />
-              <Button className="button-veja-mais">
+              <Button className="button-veja-mais" onClick={() => handleClickOpen(cinemaItem)}>
                 Veja mais +
               </Button>
             </Grid>
