@@ -1,17 +1,18 @@
-# List Heroes
+# Lista de heroís
+Projeto criado com [Create React App](https://github.com/facebookincubator/create-react-app).
 
-List Heroes create with [Create React App](https://github.com/facebookincubator/create-react-app).
+Neste projeto temos axios para chamada da [API](https://superheroapi.com/index.html), react-redux, react-hooks.
 
-### `Install dependencies using npm`
+### `Installar dependencias usando npm`
 npm install
 
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
 ##### `material-ui` 
-List Heroes using Material-UI
+List Heroes usei [Material-UI](https://material-ui.com/pt/)
+
+👤 **Roberta Soares**
+* Github: [@Rosooares](https://github.com/rosooares)
+* Github Pages: [@Github Pages](https://rosooares.github.io/list-heroes/)
+* Linkedin: [@Rosooares](https://www.linkedin.com/in/robertassoares/)

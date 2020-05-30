@@ -1,0 +1,12 @@
+.title-characteristics{
+  color: #000;
+}
+
+.description-heroes {
+  display: flex;
+}
+
+.img-heroes-dialog{
+  width: 150px;
+  height: 150px;
+}

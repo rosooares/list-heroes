@@ -1,28 +1,53 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import { getHeroes } from '../services/getHeroes';
+import ButtonLoader from './ButtonLoader';
 import '../css/Search.css';
 
-function Search({ setHeroes }) {
-  const [query, setQuery] = useState('');
+function Search(props) {
+  const [heroesState, setHeroesState] = useState({
+    name: '',
+  });
+
+  function handleInputChange(e) {
+    setHeroesState({
+      name: e.target.value
+    });
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (heroesState.name.trim()) {
+      props.searchHeroes(heroesState)
+      handleReset();
+    }
+  };
+
+  function handleReset() {
+    setHeroesState({
+      name: '',
+    });
+  };
+
 
   return (
     <form className="search-form"
-      onSubmit={async event => {
-        event.preventDefault();
-        setHeroes(await getHeroes(query));
-      }}
+      onSubmit={handleSubmit}
     >
       <TextField
         id="search-heroes"
         label="Busque seu heroí"
         variant="outlined"
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={handleInputChange}
+        value={heroesState.name}
       />
-      <Button variant="contained" className="button-search" type="submit">
+      <ButtonLoader
+        type="submit"
+        //  loading={isDeleting}
+        variant="contained"
+        className="button-search"
+      >
         Pesquisar
-      </Button>
+        </ButtonLoader>
     </form>
   );
 }
