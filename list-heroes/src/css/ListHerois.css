@@ -1,0 +1,47 @@
+.root {
+    flex-grow: 1;
+    padding: 24px;
+}
+
+.box-title-heroes{
+    background: #80808014;
+    display: flex;
+    text-align: left;
+    padding: 24px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 600 !important;
+}
+
+.box-heroes{
+    display: flex;
+    text-align: left;
+    padding: 12px 0px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.title-box-heroes{
+    color: #000;
+    font-weight: 600 !important;
+}
+
+.img-heroes{
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+}
+
+.list-powerstats{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.button-veja-mais {
+    background: #09f !important;
+    color: #fff !important;
+    margin-top: 12px !important;
+}

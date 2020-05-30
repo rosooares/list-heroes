@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  padding: 15px;
+  background-color: #b20000;
+  color: #fff;
+  text-align: left;
+  font-weight: bolder;
+  margin: 0;
+}
+
+.search-heroes{
+  padding: 24px 0px;
+}

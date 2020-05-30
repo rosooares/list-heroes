@@ -1,0 +1,11 @@
+.search-form {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-search {
+    background: #09f !important;
+    color: #fff !important;
+    margin-left: 12px !important;
+}
