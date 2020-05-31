@@ -1,0 +1,12 @@
+.life-bar {
+  width: 80%;
+  height: 10px;
+  border-radius: 3px;
+  border: 1px solid #AAA;
+}
+
+.life {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}

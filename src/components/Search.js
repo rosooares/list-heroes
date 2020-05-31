@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import ButtonLoader from './ButtonLoader';
 import '../css/Search.css';
+import SearchIcon from '@material-ui/icons/Search';
+import { Typography } from '@material-ui/core';
 
 function Search(props) {
   const [heroesState, setHeroesState] = useState({
@@ -30,25 +32,30 @@ function Search(props) {
 
 
   return (
-    <form className="search-form"
-      onSubmit={handleSubmit}
-    >
-      <TextField
-        id="search-heroes"
-        label="Busque seu heroí"
-        variant="outlined"
-        onChange={handleInputChange}
-        value={heroesState.name}
-      />
-      <ButtonLoader
-        type="submit"
-        //  loading={isDeleting}
-        variant="contained"
-        className="button-search"
+    <section className="header-seach">
+      <Typography variant="h4" className="title-box-heroes">
+        Pesquisa seu heroí!
+    </Typography>
+      <form className="search-form"
+        onSubmit={handleSubmit}
       >
-        Pesquisar
+        <TextField
+          id="search-heroes"
+          label="Digite seu heroí"
+          placeholder="Exemplo: Batman"
+          variant="outlined"
+          onChange={handleInputChange}
+          value={heroesState.name}
+        />
+        <ButtonLoader
+          type="submit"
+          variant="contained"
+          className="button-search"
+        >
+          <SearchIcon fontSize="large" />
         </ButtonLoader>
-    </form>
+      </form>
+    </section>
   );
 }
 

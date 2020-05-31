@@ -1,3 +1,9 @@
+.header-seach {
+    background-image: url('../assets/bg.jpg');
+    text-align: center;
+    padding: 10px;
+}
+
 .search-form {
     padding: 24px;
     display: flex;
@@ -8,4 +14,5 @@
     background: #09f !important;
     color: #fff !important;
     margin-left: 12px !important;
+    height: 100%;
 }

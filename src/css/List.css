@@ -3,41 +3,37 @@
     padding: 24px;
 }
 
-.box-title-heroes{
+.box-title-heroes {
     background: #80808014;
     display: flex;
     text-align: left;
     padding: 24px;
     margin-bottom: 12px;
     border-radius: 10px;
-    width: 100%;
+    justify-content: space-between;
     font-weight: 600 !important;
 }
 
-.box-heroes{
+.box-heroes {
     display: flex;
     text-align: left;
     padding: 12px 0px;
     border-bottom: 1px solid #f0f0f0;
 }
 
-.title-box-heroes{
+.title-box-heroes {
     color: #000;
     font-weight: 600 !important;
 }
 
-.img-heroes{
+.img-heroes {
     border-radius: 5px;
     width: 250px;
-    height: 250px;
+    height: 300px;
 }
 
-.list-powerstats{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.infos-heroes {
+    padding: 0px 10px 0px 0px;
 }
 
 .button-veja-mais {

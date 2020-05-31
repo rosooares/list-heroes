@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchHeroes from './containers/SearchHeroes';
-import ListHeroes from './containers/ListHeroes';
+import ListHeroesContainer from './containers/ListHeroesContainer';
 import './App.css';
 
 export default function App() {
@@ -8,7 +8,7 @@ export default function App() {
     <>
       <h3 className="header">Heroís</h3>
       <SearchHeroes />
-      <ListHeroes />
+      <ListHeroesContainer />
     </>
   );
 }

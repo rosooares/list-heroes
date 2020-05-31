@@ -7,6 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import { Powerstats } from './Powerstats';
 import '../css/DialogHeroes.css';
 
 export default function DialogHeroes({ open, onClose, heroeSelected }) {
@@ -55,8 +56,12 @@ export default function DialogHeroes({ open, onClose, heroeSelected }) {
         <DialogContent>
           <DialogContentText id="alert-dialog-description" className="dialog-heroes">
             <Grid container className="description-heroes" spacing={2}>
-              <Grid item xs={4}>
+              <Grid item xs={6}>
                 <img className="img-heroes-dialog" alt="Heroes image" src={image.url} />
+              </Grid>
+              <Grid item xs={6}>
+                <Typography variant="h6" className="title-characteristics">Powerstats</Typography>
+                <Powerstats powerstats={powerstats} />
               </Grid>
               <Grid item xs={4}>
                 <Typography variant="h6" className="title-characteristics">Appearance</Typography>
@@ -72,15 +77,7 @@ export default function DialogHeroes({ open, onClose, heroeSelected }) {
                 <Typography> Place of birth: {biography["place-of-birth"]} </Typography>
                 <Typography> Publisher: {biography.publisher} </Typography>
               </Grid>
-              <Grid item xs={4}>
-                <Typography variant="h6" className="title-characteristics">Powerstats</Typography>
-                <Typography> Combat: {powerstats.combat} </Typography>
-                <Typography> Durability: {powerstats.durability} </Typography>
-                <Typography> Intelligence: {powerstats.intelligence} </Typography>
-                <Typography> Power: {powerstats.power} </Typography>
-                <Typography> Strength: {powerstats.strength} </Typography>
-                <Typography> Speed: {powerstats.speed} </Typography>
-              </Grid>
+              
               <Grid item xs={4}>
                 <Typography variant="h6" className="title-characteristics">Work</Typography>
                 <Typography> Base: {work.base} </Typography>
