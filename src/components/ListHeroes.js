@@ -80,7 +80,6 @@ export function ListHeroes({ heroes }) {
            />
         </Grid>
       </Grid>
-
       <Grid container className="root">
         {heroesSelected.map(heroes => {
           return (
