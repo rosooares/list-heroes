@@ -8,8 +8,7 @@
   background-color: #b20000;
   color: #fff;
   text-align: left;
-  font-weight: bolder;
-  margin: 0;
+  text-transform: uppercase;
 }
 
 .search-heroes{

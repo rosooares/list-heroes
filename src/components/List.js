@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
-import ButtonLoader from './ButtonLoader';
+import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import DialogHeroes from './DialogHeroes';
 import { Powerstats } from './Powerstats';
@@ -35,11 +35,11 @@ function List({ heroes = {} }) {
             <Typography variant="h6" className="title-box-heroes"> {heroes.name} </Typography>
             <Typography variant="caption"> Poderes: </Typography>
             <Powerstats powerstats={heroes.powerstats} />
-            <ButtonLoader
+            <Button
               className="button-veja-mais"
               onClick={() => handleClickOpen(heroes)}>
               Veja mais +
-             </ButtonLoader>
+             </Button>
           </Grid>
         </Grid>
       </>

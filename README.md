@@ -3,13 +3,15 @@ Projeto criado com [Create React App](https://github.com/facebookincubator/creat
 
 Neste projeto temos axios para chamada da [API](https://superheroapi.com/index.html), react-redux, react-hooks.
 
+![](assets/gif_page.gif)
+
 ### `Installar dependencias usando npm`
 npm install
 
 ### `npm start`
 Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
 
-##### `material-ui` 
+### `material-ui` 
 List Heroes usei [Material-UI](https://material-ui.com/pt/)
 
 👤 **Roberta Soares**

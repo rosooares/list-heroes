@@ -2,7 +2,7 @@
   "name": "list-heroes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rosooares.github.io/list-heroes/",
+  "homepage": "https://rosooares.github.io/list-heroes",
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
@@ -15,7 +15,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "standard": "^14.3.4"
   },
   "scripts": {
     "start": "react-scripts start",

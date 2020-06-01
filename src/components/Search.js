@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
-import ButtonLoader from './ButtonLoader';
+import Button from '@material-ui/core/Button';
 import '../css/Search.css';
 import SearchIcon from '@material-ui/icons/Search';
 import { Typography } from '@material-ui/core';
@@ -34,7 +34,7 @@ function Search(props) {
   return (
     <section className="header-seach">
       <Typography variant="h4" className="title-box-heroes">
-        Pesquisa seu heroí!
+        Pesquise seu heroí!
     </Typography>
       <form className="search-form"
         onSubmit={handleSubmit}
@@ -47,13 +47,13 @@ function Search(props) {
           onChange={handleInputChange}
           value={heroesState.name}
         />
-        <ButtonLoader
+        <Button
           type="submit"
           variant="contained"
           className="button-search"
         >
           <SearchIcon fontSize="large" />
-        </ButtonLoader>
+        </Button>
       </form>
     </section>
   );

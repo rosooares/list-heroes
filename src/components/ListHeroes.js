@@ -2,22 +2,51 @@ import React, { useEffect, useState } from 'react';
 import List from '../components/List';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
+import { Filter } from './Filter';
 import '../css/List.css';
 
+export const Powerstats = [
+  { type: 'combat', name: 'Combat' },
+  { type: 'durability', name: 'Durability' },
+  { type: 'intelligence', name: 'Intelligence' },
+  { type: 'power', name: 'Power' },
+  { type: 'speed', name: 'Speed' },
+  { type: 'strength', name: 'Strength' },
+];
+
 export function ListHeroes({ heroes }) {
-  console.log('component heroes', heroes);
   const [heroesName, setHeroesName] = useState({});
+  const [heroesPowerLenght, setHeroesPowerLenght] = useState({});
+  const [heroesPower, setHeroesPower] = useState({});
   const [heroesSelected, setHeroesSelected] = useState([]);
 
   useEffect(() => {
+    setHeroesName(undefined);
+    setHeroesPower(undefined);
+    setHeroesPowerLenght('');
     setHeroesSelected(heroes);
   }, [heroes]);
 
-  const handleChange = (event) => {
+  const handleChangeName = (event) => {
+    setHeroesPower(undefined);
+    setHeroesPowerLenght('');
     setHeroesName(event.target.value);
     const selected = heroes.filter(item => item.name === event.target.value);
+    setHeroesSelected(selected);
+  };
+
+  const handleChangePowerstartsLeight = (event) => {
+    setHeroesName(undefined);
+    setHeroesPowerLenght(event.target.value);
+  };
+
+  const handleChangePowerstarts = (event) => {
+    const power = event.target.value;
+    setHeroesName(undefined);
+    setHeroesPower(power);
+
+    const selected = heroes
+      .filter(item => item.powerstats[power] === heroesPowerLenght)
     setHeroesSelected(selected);
   };
 
@@ -25,38 +54,33 @@ export function ListHeroes({ heroes }) {
     return (
       <Grid className="box-title-heroes">
         <Typography variant="h5" className="title-box-heroes">
-          No heroes!
+          Nenhum heroí!
       </Typography>
       </Grid>
     )
   }
-  
+
   return (
     <div>
-      <Grid className="box-title-heroes">
-        <Typography variant="h5" className="title-box-heroes">
-          Lista de Heroís
+      <Grid container className="box-title-heroes">
+        <Grid item xs={12} md={4}>
+          <Typography variant="h5" className="title-box-heroes">
+            Lista de Heroís
         </Typography>
-        <div>
-
-        <Typography variant="caption">
-            Nome
-        </Typography>
-          <Select
-            value={heroesName}
-            fullWidth
-            onChange={handleChange}
-            inputProps={{
-              name: 'heroesName',
-              id: 'name-simple',
-            }}
-          >
-            {heroes.map(item => (
-              <MenuItem data-testid="heroes" key={item.id} value={item.name}>{item.name}</MenuItem>
-            ))}
-          </Select>
-        </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Filter 
+            heroes={heroes}
+            heroesName={heroesName}
+            handleChangeName={handleChangeName}
+            handleChangePowerstartsLeight={handleChangePowerstartsLeight}
+            heroesPowerLenght={heroesPowerLenght}
+            heroesPower={heroesPower}
+            handleChangePowerstarts={handleChangePowerstarts}
+           />
+        </Grid>
       </Grid>
+
       <Grid container className="root">
         {heroesSelected.map(heroes => {
           return (
@@ -64,7 +88,7 @@ export function ListHeroes({ heroes }) {
           );
         })}
       </Grid>
-    </div>
+    </div >
   );
 }
 

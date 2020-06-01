@@ -12,6 +12,7 @@
     border-radius: 10px;
     justify-content: space-between;
     font-weight: 600 !important;
+    align-items: center;
 }
 
 .box-heroes {
@@ -24,6 +25,16 @@
 .title-box-heroes {
     color: #000;
     font-weight: 600 !important;
+}
+
+.filterName {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.filterPower{
+ justify-content: space-between;
 }
 
 .img-heroes {
