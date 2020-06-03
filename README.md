@@ -1,20 +1,49 @@
-# Lista de heroís
-Projeto criado com [Create React App](https://github.com/facebookincubator/create-react-app).
+<h1 align="center">
+   Lista de Heroís
+    </h1>
+  
+  <p align="center">
+  <img width="450" src="src/assets/herois.jpg">
+</p>
 
-Neste projeto temos axios para chamada da [API](https://superheroapi.com/index.html), react-redux, react-hooks.
 
-![](assets/gif_page.gif)
+### 🤔 Mas o que é isso? 
+A Lista de Heroís é uma experiência de pesquisa e conteúdos sobre seu super herói favorito.
 
-### `Installar dependencias usando npm`
-npm install
+💫 Chamada para [API](https://superheroapi.com/index.html) de heroís.
 
-### `npm start`
-Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.
+_________
 
-### `material-ui` 
-List Heroes usei [Material-UI](https://material-ui.com/pt/)
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [React](https://reactjs.org)
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+- [Redux](https://redux.js.org/)
+- [Axios](https://www.npmjs.com/package/axios)
+
+## 🙅 Instalações e usos
+
+Clone ou faça o downlod desse repositório:
+
+```
+# Clone o repositório
+$ git clone https://github.com/rosooares/list-heroes
+```
+
+Acesse a pasta server e faça as instalações:
+
+```
+# Instale as dependencias
+$ npm install
+
+# Rode o projeto
+$ npm start
+```
+_________
 
 👤 **Roberta Soares**
 * Github: [@Rosooares](https://github.com/rosooares)
-* Github Pages: [@Github Pages](https://rosooares.github.io/list-heroes/)
 * Linkedin: [@Rosooares](https://www.linkedin.com/in/robertassoares/)
+
